@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>벚꽃 인사</title>
+    <!--
+      Single Page Apps for GitHub Pages (rafgraph/spa-github-pages).
+      직접 접속/새로고침 시 GitHub Pages가 보여주는 404.html에서
+      현재 경로를 쿼리스트링으로 인코딩해 base(index.html)로 리다이렉트한다.
+      pathSegmentsToKeep = 1  → 프로젝트 페이지(/site-test/)에서 base 세그먼트 유지.
+    -->
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

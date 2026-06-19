@@ -1,0 +1,13 @@
+node_modules
+dist
+*.local
+.DS_Store
+.vite
+
+# Claude Code 로컬 가이드 (커밋하지 않음)
+CLAUDE.md
+
+# tsc -b 빌드 산출물
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
