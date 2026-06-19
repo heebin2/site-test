@@ -11,7 +11,7 @@ interface Drop {
   color: string
 }
 
-const BASE_WORDS = ['안녕', '반가워', '보고싶었어']
+const BASE_WORDS = ['안녕', '반가워', '보고싶었어', '잘 지냈어', '따뜻해']
 const TEXT_COLORS = ['#d63384', '#c2185b', '#ff6f91', '#b5179e']
 
 interface FallingTextProps {
@@ -30,7 +30,7 @@ export default function FallingText({ name }: FallingTextProps) {
     if (reduceMotion) return
 
     // name이 있으면 가중치를 줘서 자주 등장
-    const greeting = name ? `${name}야 안녕?` : null
+    const greeting = name ? `${name}야 안녕` : null
     const pickWord = () => {
       if (greeting && Math.random() < 0.45) return greeting
       return pick(BASE_WORDS)
