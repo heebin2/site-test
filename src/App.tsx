@@ -4,14 +4,7 @@ import NamePrompt from './components/NamePrompt'
 import { useNameFromPath } from './hooks/useNameFromPath'
 
 export default function App() {
-  const name = useNameFromPath()
-
-  // 전체 리로드 없이 URL만 바꾸고 popstate를 직접 발생시켜
-  // useNameFromPath가 즉시 갱신되게 한다.
-  const navigate = (path: string) => {
-    window.history.pushState(null, '', path)
-    window.dispatchEvent(new PopStateEvent('popstate'))
-  }
+  const { name, navigate } = useNameFromPath()
 
   const base = import.meta.env.BASE_URL // 예: "/site-test/"
   const goToName = (next: string) => navigate(base + encodeURIComponent(next))
