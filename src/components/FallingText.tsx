@@ -11,7 +11,20 @@ interface Drop {
   color: string
 }
 
-const BASE_WORDS = ['안녕', '반가워', '보고싶었어', '잘 지냈어', '따뜻해']
+const BASE_WORDS = [
+  '안녕',
+  '반가워',
+  '보고싶었어',
+  '잘 지냈어',
+  '따뜻해',
+  '기분은 어때?',
+  '예쁘다',
+  '>_<',
+  '히히',
+  '하이!',
+  '헤헤',
+  '놀자!',
+]
 const TEXT_COLORS = ['#d63384', '#c2185b', '#ff6f91', '#b5179e']
 
 interface FallingTextProps {
