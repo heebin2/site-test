@@ -162,8 +162,37 @@ body {
   cursor: not-allowed;
 }
 
+/* 우하단 벚꽃 버튼 — 처음(루트)으로 돌아가기 */
+.home-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 4;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 14px rgba(214, 51, 132, 0.3);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.home-button:hover {
+  transform: rotate(25deg) scale(1.1);
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.45);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .drop {
     animation: none;
+  }
+  .home-button {
+    transition: none;
   }
 }

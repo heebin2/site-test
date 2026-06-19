@@ -30,7 +30,7 @@ export default function FallingText({ name }: FallingTextProps) {
     if (reduceMotion) return
 
     // name이 있으면 가중치를 줘서 자주 등장
-    const greeting = name ? `${name} 야 안녕?` : null
+    const greeting = name ? `${name}야 안녕?` : null
     const pickWord = () => {
       if (greeting && Math.random() < 0.45) return greeting
       return pick(BASE_WORDS)
